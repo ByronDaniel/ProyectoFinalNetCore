@@ -1,0 +1,17 @@
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\bin\Debug\net6.0\BP.Ecommerce.Infraestructure.deps.json
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\bin\Debug\net6.0\BP.Ecommerce.Infraestructure.runtimeconfig.json
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\bin\Debug\net6.0\BP.Ecommerce.Infraestructure.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\bin\Debug\net6.0\BP.Ecommerce.Infraestructure.pdb
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\bin\Debug\net6.0\BP.Ecommerce.Domain.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\bin\Debug\net6.0\BP.Ecommerce.Domain.pdb
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.AssemblyInfo.cs
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.csproj.CopyComplete
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\refint\BP.Ecommerce.Infraestructure.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.pdb
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\BP.Ecommerce.Infraestructure.genruntimeconfig.cache
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.Infraestructure\obj\Debug\net6.0\ref\BP.Ecommerce.Infraestructure.dll
