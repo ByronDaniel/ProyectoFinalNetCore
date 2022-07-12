@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BP.Ecommerce.Domain.Repositories
+namespace BP.Ecommerce.Domain.RepositoryInterfaces
 {
     public interface IBrandRepository
     {

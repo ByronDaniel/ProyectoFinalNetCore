@@ -2,7 +2,7 @@
 using BP.Ecommerce.Application.Dtos;
 using BP.Ecommerce.Application.ServiceInterfaces;
 using BP.Ecommerce.Domain.Entities;
-using BP.Ecommerce.Domain.Repositories;
+using BP.Ecommerce.Domain.RepositoryInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

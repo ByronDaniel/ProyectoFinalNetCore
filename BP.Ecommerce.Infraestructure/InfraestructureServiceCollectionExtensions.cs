@@ -1,4 +1,4 @@
-﻿using BP.Ecommerce.Domain.Repositories;
+﻿using BP.Ecommerce.Domain.RepositoryInterfaces;
 using BP.Ecommerce.Infraestructure.Data;
 using BP.Ecommerce.Infraestructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +18,10 @@ namespace BP.Ecommerce.Infraestructure
         {
             services.AddDbContext<EcommerceDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IProductTypeRepository, ProductTypeRepository>();
+            services.AddScoped<IDeliveryMethodRepository, DeliveryMethodRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped <IProductDeliveryMethodRepository, ProductDeliveryMethodRepository>();
             return services;
         }
     }

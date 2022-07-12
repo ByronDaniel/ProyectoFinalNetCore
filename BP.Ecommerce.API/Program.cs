@@ -1,14 +1,14 @@
-using BP.Ecommerce.Application;
-using BP.Ecommerce.Application.ServiceInterfaces;
-using BP.Ecommerce.Application.Services;
-using BP.Ecommerce.Domain.Repositories;
-using BP.Ecommerce.Infraestructure;
-using BP.Ecommerce.Infraestructure.Data;
-using BP.Ecommerce.Infraestructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using BP.Ecommerce.Application;
+using BP.Ecommerce.Infraestructure;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddInfraestructure(builder.Configuration);
+builder.Services.AddApplication(builder.Configuration);
 // Cors config
 builder.Services.AddCors(options =>
 {
@@ -19,14 +19,8 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader();
     });
 });
-
-// Add services to the container.
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-builder.Services.AddInfraestructure(builder.Configuration);
-builder.Services.AddApplication(builder.Configuration);
-
-
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

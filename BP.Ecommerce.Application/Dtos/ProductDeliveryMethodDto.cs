@@ -11,12 +11,12 @@ namespace BP.Ecommerce.Application.Dtos
 {
     public class ProductDeliveryMethodDto
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public double Price { get; set; }
         public int DeliveryTimeDays { get; set; }
-        public Guid ProductId { get; set; }
-        public Product Product { get; set; }
-        public Guid DeliveryMethodId { get; set; }
-        public DeliveryMethod DeliveryMethod { get; set; }
+        public string ProductId { get; set; }
+        public string? Product { get; set; }
+        public string DeliveryMethodId { get; set; }
+        public string? DeliveryMethod { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using BP.Ecommerce.Domain.Entities;
-using BP.Ecommerce.Domain.Repositories;
+using BP.Ecommerce.Domain.RepositoryInterfaces;
 using BP.Ecommerce.Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;

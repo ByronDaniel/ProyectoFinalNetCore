@@ -15,6 +15,10 @@ namespace BP.Ecommerce.Application
         public static IServiceCollection AddApplication( this IServiceCollection services, IConfiguration configuration )
         {
             services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped<IProductTypeService, ProductTypeService>();
+            services.AddScoped<IDeliveryMethodService, DeliveryMethodService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductDeliveryMethodService, ProductDeliveryMethodService>();
             return services;
         }
     }

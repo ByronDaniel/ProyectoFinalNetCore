@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BP.Ecommerce.Domain.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BP.Ecommerce.Domain.Entities
 {
-    public class Product
+    public class Product : BaseEntity
     {
         [Key]
         public Guid Id { get; set; }
@@ -20,7 +21,7 @@ namespace BP.Ecommerce.Domain.Entities
         public string Description { get; set; }
 
         [Required]
-        public string Price { get; set; }
+        public double Price { get; set; }
 
         [Required]
         public bool Availability { get; set; } = true;
