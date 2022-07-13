@@ -1,10 +1,12 @@
 ﻿using BP.Ecommerce.Application.Dtos;
 using BP.Ecommerce.Application.ServiceInterfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BP.Ecommerce.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductTypeController : ControllerBase
@@ -18,6 +20,7 @@ namespace BP.Ecommerce.API.Controllers
             response = new ResponseDto();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<ResponseDto>> GetAllAsync(string? search = "", int limit = 5, int offset = 0, string sort = "Name", string order = "asc")
         {
@@ -34,6 +37,7 @@ namespace BP.Ecommerce.API.Controllers
             return Ok(response);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<ResponseDto>> GetByIdAsync(Guid id)
         {
