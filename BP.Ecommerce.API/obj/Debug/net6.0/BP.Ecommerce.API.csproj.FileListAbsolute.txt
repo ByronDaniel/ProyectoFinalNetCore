@@ -67,3 +67,5 @@ C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\obj\Debug\ne
 C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\obj\Debug\net6.0\ref\BP.Ecommerce.API.dll
 C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
