@@ -22,6 +22,8 @@ namespace BP.Ecommerce.Infraestructure
             services.AddScoped<IDeliveryMethodRepository, DeliveryMethodRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped <IProductDeliveryMethodRepository, ProductDeliveryMethodRepository>();
+            services.AddScoped<IBussinesLogicRepository, BussinesLogicRepository>();
+
             return services;
         }
     }

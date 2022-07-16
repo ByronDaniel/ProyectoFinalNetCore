@@ -24,7 +24,7 @@ namespace BP.Ecommerce.Application.Services
 
         public async Task<List<ProductDeliveryMethodDto>> GetAllAsync(string search, int limit, int offset, string sort, string order)
         {
-            var query = await _repository.GetQueryable(search,limit,offset,sort,order);
+            var query = await _repository.GetQueryable(search, limit, offset, sort, order);
             return await query.Select(p => new ProductDeliveryMethodDto
             {
                 Id = p.Id,

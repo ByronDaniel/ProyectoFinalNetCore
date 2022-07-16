@@ -8,6 +8,9 @@ namespace BP.Ecommerce.API.Utils
     {
         public MappingProfile()
         {
+            CreateMap<CreateBrandDto, Brand>();
+            CreateMap<Brand, CreateBrandDto>();
+
             CreateMap<BrandDto, Brand>();
             CreateMap<Brand, BrandDto>();
 
@@ -22,6 +25,13 @@ namespace BP.Ecommerce.API.Utils
 
             CreateMap<ProductTypeDto, ProductType>();
             CreateMap<ProductType, ProductTypeDto>();
+
+            CreateMap<OrderProductCreateDto, OrderProduct> ();
+            CreateMap<Order, OrderDto> ();
+
+            CreateMap<OrderCreateDto, Order> ();
+            CreateMap<Order, OrderCreateDto> ();
+
         }
     }
 }

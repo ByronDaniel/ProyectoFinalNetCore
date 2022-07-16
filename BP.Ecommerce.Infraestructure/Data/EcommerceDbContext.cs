@@ -19,5 +19,7 @@ namespace BP.Ecommerce.Infraestructure.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductDeliveryMethod> ProductDeliveryMethods { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct> OrderProducts { get; set; }
     }
 }

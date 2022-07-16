@@ -3,10 +3,6 @@ using BP.Ecommerce.Application.Dtos;
 using BP.Ecommerce.Application.ServiceInterfaces;
 using BP.Ecommerce.Domain.Entities;
 using BP.Ecommerce.Domain.RepositoryInterfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace BP.Ecommerce.Application.Services
 {
@@ -23,26 +19,32 @@ namespace BP.Ecommerce.Application.Services
 
         public async Task<List<DeliveryMethodDto>> GetAllAsync(string search, int limit, int offset, string sort, string order)
         {
-            return _mapper.Map<List<DeliveryMethodDto>>(await _repository.GetAllAsync(search, limit, offset, sort, order));
+            List<DeliveryMethod> deliveryMethods = await _repository.GetAllAsync(search, limit, offset, sort, order);
+            List<DeliveryMethodDto> deliveryMethodDtos = _mapper.Map<List<DeliveryMethodDto>>(deliveryMethods);
+            return deliveryMethodDtos;
         }
 
         public async Task<DeliveryMethodDto> GetByIdAsync(Guid id)
         {
-            return _mapper.Map<DeliveryMethodDto>(await _repository.GetByIdAsync(id));
+            DeliveryMethod deliveryMethod = await _repository.GetByIdAsync(id);
+            DeliveryMethodDto deliveryMethodDto = _mapper.Map<DeliveryMethodDto>(deliveryMethod);
+            return deliveryMethodDto;
         }
 
-        public async Task<DeliveryMethodDto> PostAsync(DeliveryMethodDto deliveryMethodDto)
+        public async Task<DeliveryMethodDto> PostAsync(CreateDeliveryMethodDto createDeliveryMethodDto)
         {
-            return _mapper.Map<DeliveryMethodDto>(await _repository.PostAsync(
-                _mapper.Map<DeliveryMethod>(deliveryMethodDto)
-                ));
+            DeliveryMethod deliveryMethod = _mapper.Map<DeliveryMethod>(createDeliveryMethodDto);
+            DeliveryMethod deliveryMethodResult = await _repository.PostAsync(deliveryMethod);
+            DeliveryMethodDto deliveryMethodDto = _mapper.Map<DeliveryMethodDto>(deliveryMethodResult);
+            return deliveryMethodDto;
         }
 
-        public async Task<DeliveryMethodDto> PutAsync(DeliveryMethodDto deliveryMethodDto)
+        public async Task<DeliveryMethodDto> PutAsync(DeliveryMethodDto updateDeliveryMethodDto)
         {
-            return _mapper.Map<DeliveryMethodDto>(await _repository.PutAsync(
-                _mapper.Map<DeliveryMethod>(deliveryMethodDto)
-                ));
+            DeliveryMethod deliveryMethod = _mapper.Map<DeliveryMethod>(updateDeliveryMethodDto);
+            DeliveryMethod deliveryMethodResult = await _repository.PutAsync(deliveryMethod);
+            DeliveryMethodDto deliveryMethodDto = _mapper.Map<DeliveryMethodDto>(deliveryMethodResult);
+            return deliveryMethodDto;
         }
 
         public async Task<bool> DeleteByIdAsync(Guid id)

@@ -1,9 +1,4 @@
 ﻿using BP.Ecommerce.Application.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BP.Ecommerce.Application.ServiceInterfaces
 {
@@ -14,7 +9,7 @@ namespace BP.Ecommerce.Application.ServiceInterfaces
         /// </summary>
         /// <returns></returns>
         Task<List<DeliveryMethodDto>> GetAllAsync(string search, int limit, int offset, string sort, string order);
-            
+
         /// <summary>
         /// Obtiene metodo de entrega por Id
         /// </summary>
@@ -26,7 +21,7 @@ namespace BP.Ecommerce.Application.ServiceInterfaces
         /// </summary>
         /// <param name="deliveryMethodDto"></param>
         /// <returns></returns>
-        Task<DeliveryMethodDto> PostAsync(DeliveryMethodDto deliveryMethodDto);
+        Task<DeliveryMethodDto> PostAsync(CreateDeliveryMethodDto createDeliveryMethodDto);
 
         /// <summary>
         /// Edita metodo de entrega

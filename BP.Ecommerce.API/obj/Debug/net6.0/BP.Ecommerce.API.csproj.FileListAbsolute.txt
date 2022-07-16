@@ -69,3 +69,8 @@ C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\ne
 C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ByronDaniel\Documents\BD\BP.Ecommerce.API\BP.Ecommerce.API\bin\Debug\net6.0\Newtonsoft.Json.dll

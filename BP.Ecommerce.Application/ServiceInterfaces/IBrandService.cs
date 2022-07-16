@@ -14,7 +14,7 @@ namespace BP.Ecommerce.Application.ServiceInterfaces
         /// </summary>
         /// <returns></returns>
         Task<List<BrandDto>> GetAllAsync(string search, int limit, int offset, string sort, string order);
-            
+
         /// <summary>
         /// Obtiene marca por Id
         /// </summary>
@@ -26,14 +26,14 @@ namespace BP.Ecommerce.Application.ServiceInterfaces
         /// </summary>
         /// <param name="brandDto"></param>
         /// <returns></returns>
-        Task<BrandDto> PostAsync(BrandDto brandDto);
+        Task<BrandDto> PostAsync(CreateBrandDto createBrandDto);
 
         /// <summary>
         /// Edita marca
         /// </summary>
         /// <param name="brandDto"></param>
         /// <returns></returns>
-        Task<BrandDto> PutAsync(BrandDto brandDto);
+        Task<BrandDto> PutAsync(BrandDto updateBrandDto);
 
         /// <summary>
         /// Elimina marca por Id

@@ -2,11 +2,6 @@
 using BP.Ecommerce.Domain.RepositoryInterfaces;
 using BP.Ecommerce.Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BP.Ecommerce.Infraestructure.Repositories
 {
@@ -52,10 +47,6 @@ namespace BP.Ecommerce.Infraestructure.Repositories
         public async Task<Brand> GetByIdAsync(Guid id)
         {
             Brand brandExist = await _context.Brands.Where(b => b.Id == id && b.Status == true).SingleOrDefaultAsync();
-            if (brandExist == null)
-            {
-                throw new Exception($"No existe marca con id: {id}");
-            }
             return brandExist;
         }
 
@@ -64,7 +55,7 @@ namespace BP.Ecommerce.Infraestructure.Repositories
             var brandExist = await _context.Brands.Where(b => b.Name == brand.Name).SingleOrDefaultAsync();
             if (brandExist != null)
             {
-                throw new Exception($"Ya existe una marca: {brandExist.Name}");
+                throw new ArgumentNullException($"Ya existe una marca: {brandExist.Name}");
             }
             await _context.Brands.AddAsync(brand);
             await _context.SaveChangesAsync();

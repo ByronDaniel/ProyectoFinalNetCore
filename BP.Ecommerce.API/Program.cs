@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using BP.Ecommerce.API.Utils;
+using BP.Ecommerce.API.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +14,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddInfraestructure(builder.Configuration);
 builder.Services.AddApplication(builder.Configuration);
-builder.Services.AddControllers();
+// Add services to the container.
+builder.Services.AddControllers(options =>
+{
+    //Aplicar filter globalmente a todos los controller
+    options.Filters.Add<ApiExceptionFilterAttribute>();
+})
 
+;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -34,17 +41,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
-
-// Cors config
-builder.Services.AddCors(options =>
+builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy(name: "_myAllowSpecificOrigins", builder =>
-    {
-        builder.WithOrigins("http://localhost:4200")
-        .AllowAnyMethod()
-        .AllowAnyHeader();
-    });
+    options.AddPolicy("Ecuatoriano", policy => policy.RequireClaim("Ecuatoriano", true.ToString()));
 });
+
+// Config 1 Cors config
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy(name: "_myAllowSpecificOrigins", builder =>
+//    {
+//        builder.WithOrigins("http://localhost:4200")
+//        .AllowAnyMethod()
+//        .AllowAnyHeader();
+//    });
+//});
+
+builder.Services.AddCors();
+
 
 //3. Configuration
 builder.Services.Configure<JwtConfiguration>(builder.Configuration.GetSection("JWT"));
@@ -57,7 +71,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("_myAllowSpecificOrigins");
+// Config 1 Cors config
+//app.UseCors("_myAllowSpecificOrigins");
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) // Permitir cualquier origen
+    .AllowCredentials());
 
 app.UseHttpsRedirection();
 
